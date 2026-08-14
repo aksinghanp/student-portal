@@ -18,3 +18,10 @@ Clone the repository and move into the project directory:
 ```bash
 git clone https://github.com/aksinghanp/student-portal.git
 cd student-portal
+
+## Compilation
+
+Compile the C++ source file using `g++`:
+
+```bash
+g++ main.cpp -o student-portal
