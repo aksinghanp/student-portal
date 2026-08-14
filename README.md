@@ -26,3 +26,10 @@ Compile the C++ source file using `g++`:
 ```bash
 g++ main.cpp -o student-portal
 ```
+## Execution
+
+After compilation, run the executable with:
+
+```bash
+./student-portal
+```
