@@ -13,7 +13,9 @@ void greetUser() {
 int addNumbers(int a, int b) {
     return a + b;
 }
-
+int subtractNumbers(int a, int b) {
+    return a - b;
+}
 int main() {
     printWelcomeMessage();
     greetUser();
@@ -21,8 +23,10 @@ int main() {
     int num1 = 5;
     int num2 = 10;
     int result = addNumbers(num1, num2);
+    int difference = subtractNumbers(num1, num2);
 
     std::cout << "The sum of " << num1 << " and " << num2 << " is: " << result << std::endl;
+    std::cout << "The difference between " << num1 << " and " << num2 << " is: " << difference << std::endl;
     std::cout << "Program finished successfully." << std::endl;
 
     return 0;
