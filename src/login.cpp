@@ -6,6 +6,13 @@ using namespace std;
 bool login(const string& username, const string& password) {
     return username == "student" && password == "1234";
 }
+void showLoginStatus(bool success) {
+    if (success) {
+        cout << "User authenticated successfully." << endl;
+    } else {
+        cout << "Authentication failed." << endl;
+    }
+}
 
 int main() {
     string username;
@@ -23,10 +30,11 @@ int main() {
             continue;
         }
 
-        if (login(username, password)) {
-            cout << "Login successful." << endl;
-            return 0;
-        }
+       if (login(username, password)) {
+              cout << "Invalid username or password." << endl;
+             showLoginStatus(false);
+    return 0;
+}
 
         cout << "Invalid username or password." << endl;
         cout << "Attempts remaining: " << 3 - attempt << endl;
