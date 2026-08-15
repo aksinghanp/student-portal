@@ -7,6 +7,7 @@ struct Dashboard {
     string studentName;
     int courses;
     int completedCourses;
+    double attendance;
 };
 
 void displayDashboard(const Dashboard& data) {
@@ -14,6 +15,7 @@ void displayDashboard(const Dashboard& data) {
     cout << "Student: " << data.studentName << endl;
     cout << "Total Courses: " << data.courses << endl;
     cout << "Completed Courses: " << data.completedCourses << endl;
+    cout << "Attendance: " << data.attendance << "%" << endl;
 }
 double calculateProgress(const Dashboard& data) {
     if (data.courses == 0) {
@@ -28,6 +30,8 @@ int main() {
 
     cout << "Enter student name: ";
     getline(cin, data.studentName);
+    cout << "Enter attendance percentage: ";
+cin >> data.attendance;
 
     cout << "Enter total courses: ";
     cin >> data.courses;
