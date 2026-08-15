@@ -16,6 +16,11 @@ void displayProfile(const StudentProfile& student) {
     cout << "Email: " << student.email << endl;
 }
 
+void updateEmail(StudentProfile& student) {
+    cout << "Enter new email: ";
+    getline(cin, student.email);
+}
+
 int main() {
     StudentProfile student;
 
@@ -29,6 +34,18 @@ int main() {
     getline(cin, student.email);
 
     displayProfile(student);
+    char choice;
+
+cout << "\nDo you want to update your email? (y/n): ";
+cin >> choice;
+cin.ignore();
+
+if (choice == 'y' || choice == 'Y') {
+    updateEmail(student);
+
+    cout << "\nUpdated Profile:" << endl;
+    displayProfile(student);
+}
 
     return 0;
 }
