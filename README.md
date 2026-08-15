@@ -50,4 +50,7 @@ This project demonstrates branching, merging, stashing, conflict resolution, and
 
 This change was initially committed on the wrong branch.
 
+
 This project demonstrates Git branching, merging, and conflict resolution
+This project demonstrates Git branching and merging workflows.
+
