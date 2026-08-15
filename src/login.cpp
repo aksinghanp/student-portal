@@ -16,6 +16,10 @@ int main() {
 
     cout << "Password: ";
     cin >> password;
+    if (username.empty() || password.empty()) {
+    cout << "Username and password cannot be empty." << endl;
+    return 1;
+}
 
     if (login(username, password)) {
         cout << "Login successful." << endl;
