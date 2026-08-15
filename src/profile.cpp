@@ -20,6 +20,11 @@ void updateEmail(StudentProfile& student) {
     cout << "Enter new email: ";
     getline(cin, student.email);
 }
+bool isValidProfile(const StudentProfile& student) {
+    return !student.name.empty() &&
+           !student.rollNumber.empty() &&
+           !student.email.empty();
+}
 
 int main() {
     StudentProfile student;
@@ -32,6 +37,11 @@ int main() {
 
     cout << "Enter email: ";
     getline(cin, student.email);
+    
+    if (!isValidProfile(student)) {
+    cout << "Profile fields cannot be empty." << endl;
+    return 1;
+}
 
     displayProfile(student);
     char choice;
