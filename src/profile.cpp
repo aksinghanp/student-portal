@@ -25,6 +25,15 @@ bool isValidProfile(const StudentProfile& student) {
            !student.rollNumber.empty() &&
            !student.email.empty();
 }
+void displayProfileSummary(const StudentProfile& student) {
+    cout << "\n========================" << endl;
+    cout << "     PROFILE SUMMARY" << endl;
+    cout << "========================" << endl;
+    cout << "Student: " << student.name << endl;
+    cout << "Roll No: " << student.rollNumber << endl;
+    cout << "Email:   " << student.email << endl;
+    cout << "========================" << endl;
+}
 
 int main() {
     StudentProfile student;
@@ -37,7 +46,7 @@ int main() {
 
     cout << "Enter email: ";
     getline(cin, student.email);
-    
+
     if (!isValidProfile(student)) {
     cout << "Profile fields cannot be empty." << endl;
     return 1;
@@ -55,6 +64,14 @@ if (choice == 'y' || choice == 'Y') {
 
     cout << "\nUpdated Profile:" << endl;
     displayProfile(student);
+}
+displayProfileSummary(student);
+if (choice == 'y' || choice == 'Y') {
+    updateEmail(student);
+
+    cout << "\nUpdated Profile:" << endl;
+    displayProfile(student);
+    displayProfileSummary(student);
 }
 
     return 0;
