@@ -6,13 +6,14 @@ using namespace std;
 struct Settings {
     string username;
     bool notifications;
+    string theme;
 };
-
 void displaySettings(const Settings& settings) {
-    cout << "\n===== USER SETTINGS =====" << endl;
-    cout << "Username: " << settings.username << endl;
-    cout << "Notifications: "
-         << (settings.notifications ? "Enabled" : "Disabled") << endl;
+cout << "1. Display settings" << endl;
+cout << "2. Change username" << endl;
+cout << "3. Update notifications" << endl;
+cout << "4. Change theme" << endl;
+cout << "5. Exit" << endl;
 }
 
 void updateNotifications(Settings& settings) {
@@ -45,7 +46,7 @@ int main() {
     getline(cin, settings.username);
 
     settings.notifications = true;
-
+    settings.theme = "Light";
     int choice;
 
     do {
