@@ -40,3 +40,7 @@ The project currently contains the following main files:
 - `main.cpp` - Contains the main C++ program and its implemented functions.
 - `.gitignore` - Specifies files that should not be tracked by Git.
 - `README.md` - Contains project documentation, setup, compilation, and execution instructions.
+
+## Git Version Control Demonstration
+
+This project demonstrates branching, merging, stashing, conflict resolution, and Git history recovery.
