@@ -11,21 +11,28 @@ int main() {
     string username;
     string password;
 
-    cout << "Username: ";
-    cin >> username;
+    for (int attempt = 1; attempt <= 3; attempt++) {
+        cout << "Username: ";
+        cin >> username;
 
-    cout << "Password: ";
-    cin >> password;
-    if (username.empty() || password.empty()) {
-    cout << "Username and password cannot be empty." << endl;
-    return 1;
-}
+        cout << "Password: ";
+        cin >> password;
 
-    if (login(username, password)) {
-        cout << "Login successful." << endl;
-    } else {
+        if (username.empty() || password.empty()) {
+            cout << "Username and password cannot be empty." << endl;
+            continue;
+        }
+
+        if (login(username, password)) {
+            cout << "Login successful." << endl;
+            return 0;
+        }
+
         cout << "Invalid username or password." << endl;
+        cout << "Attempts remaining: " << 3 - attempt << endl;
     }
 
-    return 0;
+    cout << "Maximum login attempts exceeded." << endl;
+
+    return 1;
 }
