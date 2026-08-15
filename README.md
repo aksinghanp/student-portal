@@ -44,3 +44,8 @@ The project currently contains the following main files:
 ## Git Version Control Demonstration
 
 This project demonstrates branching, merging, stashing, conflict resolution, and Git history recovery.
+
+
+## Branch Correction Demo
+
+This change was initially committed on the wrong branch.
